@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content="个人博客" />
+		<meta name="keywords" content="个人博客 中国 我爱你 " />
+		<meta http-equiv="X-UA-Compatible" content="IE-Edge,chrome=1">
+		<meta name="viewport" content="width=device-width,initial-scare=1" >
+		<title>用户注册 </title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="css/register.css">
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+		<style type="text/css">
+		/**{margin: 0;padding: 0;}
+		.u-laber {
+			margin-top: 20px;
+		}
+
+		.u-laber li{
+			height: 60px;
+			width: 100px;
+			text-align: right;
+			list-style: none;
+			line-height: 60px;
+	
+		}
+
+
+		.u-input li{
+			height: 60px;
+			list-style: none;
+		}
+		.u-input{
+			margin-left: 110px;
+			margin-top: -412px;
+		}
+
+		.input-box
+		{	
+			height: 40px;
+			width: 320px;
+			border: 1px solid #ddd;
+			border-radius: 3%;
+			text-indent: .3em;
+		}
+
+		#form1 .u-input .sex
+		{
+			height: 20px;
+			width: 20px;
+			margin-top: 12px;
+
+		}
+
+		#loginBtn
+		{
+			background: #ccc;
+			height: 55px;
+			width: 320px;
+			font-size: 20px;
+			color: #fff;
+			border: 1px solid #ddd;
+			border-radius: 3%;
+		}
+
+		#loginBtn:hover
+		{
+			border: 1px solid #aaa;
+		}*/
+		</style>
+	</head>
+	<body>
+		<div class="whole">
+			<header>
+				<nav>
+					<div class="logo"><a href="blok.html">hanson</a></div>
+					<ul>
+						<li><a href="#">一言</a></li>
+						<li><a href="#">一行</a></li>
+						<li><a href="#">一颦</a></li>
+						<li><a href="#">一笑</a></li>
+					</ul>
+				</nav>
+				
+				<!-- 注册框开始 -->
+				<div class="register">
+					<h1>网易</h1>
+					<h3>已有账号?去<a href="">登陆</a></h3>
+					
+					<form action="" method="Post" name="form1" id="form1">
+						<div class="top-tlt">注册账号</div>
+						<div class="u-laber">
+							<ul>
+								<li>账号：</li>
+								<li>密码：</li>
+								<li>确认密码：</li>
+								<li>我是：</li>
+								<li>常住地：</li>
+								<li>生日：</li>
+								<li>学历：</li>
+							</ul>
+						</div>
+						
+						<div class="u-input">
+						<div>
+							<ul>
+								<li><input onblur="fun1();" type="text" name="u-number" id="u-number" placeholder="手机号码/邮箱" class="input-box" autofocus="autofocus"></input><label id="lab1"></label></li>
+							</ul></div>
+							<div>
+							<ul>
+								<li><input onblur="fun2();" type="password" name="u-password" id="u-password" placeholder="6-16位密码，区分大小写" class="input-box"></input><label id="lab2"></label></li>
+							</ul>
+							<div>
+							<ul>
+								<li><input onblur="fun3();" type="password" name="again-password" id="again-password" placeholder="再次输入密码" class="input-box"></input><label id="lab3"></label></li>
+							</ul></div>
+							<div>
+							<ul>
+								<li><input type="radio" name="sex"  value="boy" id="sex-boy" class="sex"> 男</input>
+								<input type="radio"  name="sex" value="girl" id="sex-girl" class="sex"> 女</input></li>
+							</ul></div>
+							
+							
+							<div>
+							<ul>
+								<li>
+								<select id="address"  class="input-box">
+									<option value="1">北京</option>
+									<option value="2">上海</option>
+									<option value="3">深圳</option>
+									<option value="4">广州</option>
+									<option value="5">杭州</option>
+									<option value="6">武汉</option>
+									<option value="7">长沙</option>
+								</select>
+								</li>
+							</ul></div>
+							
+							
+							<div>
+							<ul>
+								<li><input type="text" name="bornYear" id="bornYear" class="born" placeholder="1970"></input>
+								<input type="text" name="bornMonth" id="bornMonth" class="born" placeholder="07"></input>
+								<input type="text" name="bornDate" id="bornDate" class="born" placeholder="25"></input></li>
+							</ul></div>
+							
+							
+							<div>
+							<ul>
+								<li>
+								<select id="education"  class="input-box">
+									<option value="1">海归</option>
+									<option value="2">博士</option>
+									<option value="3">本科</option>
+									<option value="4">专科</option>
+								
+								</select></li>
+							</ul></div>
+							
+							<div>
+							<ul>
+								<li><input type="button" value="免费注册"  id="loginBtn" onclick="login();"></input></li>
+							</ul></div>
+						</div>
+					</form>
+					
+				</div>
+				<!-- 注册框结束 -->
+				<!--************************************************ -->
+				<footer>
+					<div class="footer-icon">
+						<div class="share-group">
+							<ul>
+								<li class="weChat" >
+									<a href="" >
+									<img src="img/weChat_display.png"></a>
+								</li>
+								<li class="weibo" >
+									<a href="http://weibo.com/u/1738045410?refer_flag=1001030101_&is_all=1" target="_blank">
+									<img src="img/weibo_displayNone.png"></a>
+								</li>
+								<li class="qzone" >
+									<a href="http://user.qzone.qq.com/1148414287/main" target="_blank">
+									<img src="img/qzone_displayNone.png"></a>
+								</li>
+							</ul>
+						</div>
+						<span class="copy">Copyright © 2016 hanson</span>
+					</div>
+					</footer><!-- 页脚 -->
+				</div>
+				
+				
+
+
+<script type="text/javascript">
+
+	    var lab1 = document.getElementById("lab1");
+	    var lab2 = document.getElementById("lab2");
+	    var lab3 = document.getElementById("lab3");
+		var username = document.getElementById("u-number");
+		var password = document.getElementById("u-password");
+		var againpwd = document.getElementById("again-password");
+
+	function fun1() {
+		
+		
+			// lab1.innerHTML = "请输入账号";
+			// lab1.style.color="red";
+
+	}
+	// function fun2() {
+		
+	// 	lab2.innerHTML = "请输入密码";
+	// 	lab2.style.color="red";
+	// }
+	// function fun3() {
+		
+	// 	lab3.innerHTML = "请再次输入密码";
+	// 	lab3.style.color="red";
+	// }
+
+	function login(argument) {
+		// var username = document.getElementById("u-number");
+		// alert(username.value);
+
+		var lab1 = document.getElementById("lab1");
+	    var lab2 = document.getElementById("lab2");
+	    var lab3 = document.getElementById("lab3");
+		var username = document.getElementById("u-number");
+		var password = document.getElementById("u-password");
+		var againpwd = document.getElementById("again-password");
+		// alert(username.value+"....."+password.value+"...."+againpwd.value);
+			
+			if (username.value=="") {
+				lab1.innerHTML = "*请先输入账号";
+				lab1.style.color="red";
+			}
+			if (password.value=="") {
+				lab2.innerHTML = "*请输入密码";
+				lab2.style.color="red";
+			}
+			if (againpwd.value=="") {
+				lab3.innerHTML = "*请输入确认密码";
+				lab3.style.color="red";
+			}
+
+		if(username.value!=""){
+			lab1.innerHTML = "";
+			if (password.value=="") {
+				lab2.innerHTML = "*请输入密码";
+				lab2.style.color="red";
+			}
+			if (againpwd.value=="") {
+				lab3.innerHTML = "*请输入确认密码";
+				lab3.style.color="red";
+			}
+		}
+
+		if(password.value!=""){
+			lab2.innerHTML = "";
+			if (username.value=="") {
+				lab1.innerHTML = "*请先输入账号";
+				lab1.style.color="red";
+			}
+			if (againpwd.value=="") {
+				lab3.innerHTML = "*请输入确认密码";
+				lab3.style.color="red";
+			}
+		}
+
+		if(againpwd.value!=""){
+			lab3.innerHTML = "";
+			if (username.value=="") {
+			lab1.innerHTML = "*请先输入账号";
+			lab1.style.color="red";
+		    }
+			if (password.value=="") {
+				lab2.innerHTML = "*请先输入密码";
+				lab2.style.color="red";
+			}
+		}
+		if (username.value=="hanson"&& password.value=="123456"&&againpwd.value=="123456") {
+			alert("注册成功");
+			location.href="index.html";
+		}
+
+		
+	}
+</script>
+			</body>
+		</html>
